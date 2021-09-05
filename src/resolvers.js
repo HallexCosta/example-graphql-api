@@ -1,12 +1,11 @@
-const User = require("./User");
+const User = require('./User')
 
 module.exports = {
   Query: {
-    users: () => User.find(),
-    user: (_, { id }) => User.findById(id),
+    users: async () => await User.find(),
+    user: async (_, { id }) => await User.findById(id)
   },
   Mutation: {
-    createUser: (_, { name, email }) => User.create({ name, email }),
-  },
-};
-
+    createUser: async (_, { name, email }) => await User.create({ name, email })
+  }
+}

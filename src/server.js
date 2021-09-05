@@ -1,15 +1,18 @@
-const { GraphQLServer } = require("graphql-yoga");
-const { resolve } = require("path");
-const resolvers = require("./resolvers");
-const mongoose = require("mongoose");
+const { ApolloServer } = require('apollo-server')
+const mongoose = require('mongoose')
+
+const { typeDefs } = require('./schema')
+const resolvers = require('./resolvers')
 
 mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-});
+  useNewUrlParser: true
+})
 
-const server = new GraphQLServer({
-  typeDefs: resolve(__dirname, "schema.graphql"),
-  resolvers,
-});
+const server = new ApolloServer({
+  typeDefs,
+  resolvers
+})
 
-server.start();
+server.listen().then(({ url }) => {
+  console.log(`🚀 Server ready at ${url}`)
+})
