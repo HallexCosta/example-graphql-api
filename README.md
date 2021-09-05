@@ -1,39 +1,42 @@
 <h1 align="center">
-    Example GraphQL API
+    Example GraphQL API - Apollo Server
 </h1>
 
-
 ### Getting Starting
+
 - Testing GraphQL with database
-    1. Cloning project
 
-        ```bash
-        git clone git@github.com:HallexCosta/example-graphql-api.git
-        ```
+  1. Cloning project
 
-    2. Install dependencies
+     ```bash
+     git clone --branch apollo-server git@github.com:HallexCosta/example-graphql-api.git
+     ```
 
-        ```bash
-        yarn
-        ```
+  2. Install dependencies
 
-    3. Configure environment variables
-        - creates the file `.env`
+     ```bash
+     yarn
+     ```
 
-            ```bash
-            cp .env-example .env
-            ```
+  3. Configure environment variables
 
-        - configure file `.env` (should work normally, if I not deletes the animes-united-cluster and animes-united-test)
+     - creates the file `.env`
 
-            ```bash
-            MONGODB_URI=YOUR_MONGODB_URI
-            ```
+       ```bash
+       cp .env-example .env
+       ```
 
-    3. Starting API
+     - configure file `.env` (should work normally, if I not deletes the animes-united-cluster and animes-united-test)
 
-        > If have returned an error is because the GraphQL API not started with successfully
+       ```bash
+       MONGODB_URI=YOUR_MONGODB_URI
+       ```
 
-        ```graphql
-        yarn start
-        ```
+  4. Starting API
+
+     > If have returned an error is because the GraphQL API not started with successfully
+
+     ```graphql
+     yarn start
+     ```
+
