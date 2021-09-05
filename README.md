@@ -26,7 +26,7 @@
      yarn start
      ```
 
-## Queries
+## Requests
 
 List All Books
 
@@ -90,6 +90,6 @@ mutation {
 }
 ```
 
-References:
+References:  
 [How build GraphQL API TypeGraphQL TypeORM](https://blog.logrocket.com/how-build-graphql-api-typegraphql-typeorm)
 
