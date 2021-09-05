@@ -2,38 +2,94 @@
     Example GraphQL API
 </h1>
 
-
 ### Getting Starting
+
 - Testing GraphQL with database
-    1. Cloning project
 
-        ```bash
-        git clone git@github.com:HallexCosta/example-graphql-api.git
-        ```
+  1. Cloning project
 
-    2. Install dependencies
+     ```bash
+     git clone --branch typeorm git@github.com:HallexCosta/example-graphql-api.git
+     ```
 
-        ```bash
-        yarn
-        ```
+  2. Install dependencies
 
-    3. Configure environment variables
-        - creates the file `.env`
+     ```bash
+     yarn
+     ```
 
-            ```bash
-            cp .env-example .env
-            ```
+  3. Starting API
 
-        - configure file `.env` (should work normally, if I not deletes the animes-united-cluster and animes-united-test)
+     > If have returned an error is because the GraphQL API not started with successfully
 
-            ```bash
-            MONGODB_URI=YOUR_MONGODB_URI
-            ```
+     ```graphql
+     yarn start
+     ```
 
-    3. Starting API
+## Queries
 
-        > If have returned an error is because the GraphQL API not started with successfully
+List All Books
 
-        ```graphql
-        yarn start
-        ```
+```graphql
+query {
+  books {
+    id
+    title
+    author
+    isPublished
+  }
+}
+```
+
+Create an Book
+
+```graphql
+mutation {
+  createBook(
+    data: { title: "Clean Architecture", author: "Robert C. Martin" }
+  ) {
+    id
+    title
+    author
+    isPublished
+  }
+}
+```
+
+List Book By Id
+
+```graphql
+query {
+  book(id: "1") {
+    id
+    title
+    author
+    isPublished
+  }
+}
+```
+
+Update Book By Id
+
+```graphql
+mutation {
+  updateBook(id: "1", data: { isPublished: true }) {
+    id
+    title
+    author
+    isPublished
+  }
+}
+```
+
+Delete Book By Id
+
+```graphql
+mutation {
+  deleteBook(id: "3")
+}
+```
+
+References:
+[How build GraphQL API TypeGraphQL TypeORM](https://blog.logrocket.com/how-build-graphql-api-typegraphql-typeorm)
+
