@@ -1,7 +1,15 @@
+input UpdateUserInput {
+  id: ID
+  name: String
+  email: String
+  isPremium: Boolean
+}
+
 type User {
   id: ID!
   name: String!
   email: String!
+  isPremium: Boolean!
 }
 
 type Query {
@@ -11,4 +19,6 @@ type Query {
 
 type Mutation {
   createUser(name: String!, email: String!): User
+  updateUser(id: String!, data: UpdateUserInput!): User
+  deleteUser(id: String!): User
 }
