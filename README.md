@@ -40,3 +40,77 @@
      yarn start
      ```
 
+## Requests
+
+List All Users
+
+```graphql
+query {
+  users {
+    id
+    name
+    email
+    isPremium
+  }
+}
+```
+
+List User by Id
+
+```graphql
+query {
+  user(id: "1") {
+    id
+    name
+    email
+    isPremium
+  }
+}
+```
+
+Create an User
+
+```graphql
+mutation {
+  createUser(name: "Example", email: "teste@example.com") {
+    id
+    name
+    email
+    isPremium
+  }
+}
+```
+
+List User By Id
+
+```graphql
+query {
+  user(id: "1") {
+    id
+    name
+    email
+    isPremium
+  }
+}
+```
+
+Update User By Id
+
+```graphql
+mutation {
+  updateUser(id: "1", { isPremium: true }) {
+    id
+    name
+    email
+    isPremium
+  }
+}
+```
+
+Delete User By Id
+
+```graphql
+mutation {
+  deleteUser(id: "1")
+}
+```

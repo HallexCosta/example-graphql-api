@@ -5,6 +5,13 @@ module.exports.typeDefs = gql`
     id: ID!
     name: String!
     email: String!
+    isPremium: Boolean!
+  }
+
+  input UpdateUser {
+    name: String
+    email: String
+    isPremium: Boolean
   }
 
   type Query {
@@ -14,5 +21,7 @@ module.exports.typeDefs = gql`
 
   type Mutation {
     createUser(name: String!, email: String!): User
+    updateUser(id: String!, data: UpdateUser!): User
+    deleteUser(id: String!): User
   }
 `
