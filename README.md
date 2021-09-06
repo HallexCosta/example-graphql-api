@@ -115,6 +115,6 @@ mutation {
 }
 ```
 
-References:
+References:  
 [GraphQL aplicado no Node.js | Diego Fernandes](https://www.youtube.com/watch?v=oD8GqurXZ-0&t=701s)  
 [GitHub - dotansimha/graphql-yoga: 🧘 Fully-featured GraphQL Server with focus on easy setup, performance & great developer experience](https://github.com/dotansimha/graphql-yoga)
