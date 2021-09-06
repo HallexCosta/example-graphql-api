@@ -22,7 +22,7 @@
 
      > If have returned an error is because the GraphQL API not started with successfully
 
-     ```graphql
+     ```bash
      yarn start
      ```
 
