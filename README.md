@@ -1,5 +1,5 @@
 <h1 align="center">
-    Example GraphQL API
+    Example GraphQL API - TypeGraphQL
 </h1>
 
 ### Getting Starting
@@ -9,7 +9,7 @@
   1. Cloning project
 
      ```bash
-     git clone --branch typeorm git@github.com:HallexCosta/example-graphql-api.git
+     git clone --branch type-graphql git@github.com:HallexCosta/example-graphql-api.git
      ```
 
   2. Install dependencies
@@ -92,4 +92,3 @@ mutation {
 
 References:  
 [How build GraphQL API TypeGraphQL TypeORM](https://blog.logrocket.com/how-build-graphql-api-typegraphql-typeorm)
-
