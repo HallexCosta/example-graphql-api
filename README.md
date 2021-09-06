@@ -36,7 +36,7 @@
 
      > If have returned an error is because the GraphQL API not started with successfully
 
-     ```graphql
+     ```bash
      yarn start
      ```
 
@@ -114,3 +114,6 @@ mutation {
   deleteUser(id: "1")
 }
 ```
+
+References:  
+[GitHub - apollographql/apollo-server: 🌍 Spec-compliant and production ready JavaScript GraphQL server that lets you develop in a schema-first way. Built for Express, Connect, Hapi, Koa, and more.](https://github.com/apollographql/apollo-server)
