@@ -1,5 +1,5 @@
 <h1 align="center">
-    Example GraphQL API - GraphQL Yoga
+    Example GraphQL API - Express GraphQL
 </h1>
 
 ### Getting Starting
@@ -9,7 +9,7 @@
   1. Cloning project
 
      ```bash
-     git clone --branch graphql-yoga git@github.com:HallexCosta/example-graphql-api.git
+     git clone --branch express-graphql git@github.com:HallexCosta/example-graphql-api.git
      ```
 
   2. Install dependencies
@@ -36,7 +36,7 @@
 
      > If have returned an error is because the GraphQL API not started with successfully
 
-     ```graphql
+     ```bash
      yarn start
      ```
 

@@ -1,19 +1,29 @@
 const { resolve } = require('path')
-const { GraphQLServer } = require('graphql-yoga')
+const { graphqlHTTP } = require('express-graphql')
+const { buildSchema } = require('graphql')
 
+const express = require('express')
 const mongoose = require('mongoose')
 
+const schema = require('./schema')
 const resolvers = require('./resolvers')
+
+const app = express()
+const port = 4000
 
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true
 })
 
-const server = new GraphQLServer({
-  typeDefs: resolve(__dirname, 'schema.graphql'),
-  resolvers
-})
+app.use(
+  '/graphql',
+  graphqlHTTP({
+    schema,
+    rootValue: resolvers,
+    graphiql: true
+  })
+)
 
-server.start(({ port }) =>
+app.listen(port, () =>
   console.log(`🚀 Server ready at http://localhost:${port}/`)
 )
