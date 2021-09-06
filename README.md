@@ -9,7 +9,7 @@
   1. Cloning project
 
      ```bash
-     git clone git@github.com:HallexCosta/example-graphql-api.git
+     git clone --branch graphql-yoga git@github.com:HallexCosta/example-graphql-api.git
      ```
 
   2. Install dependencies
