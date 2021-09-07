@@ -81,19 +81,6 @@ mutation {
 }
 ```
 
-List User By Id
-
-```graphql
-query {
-  user(id: "1") {
-    id
-    name
-    email
-    isPremium
-  }
-}
-```
-
 Update User By Id
 
 ```graphql
